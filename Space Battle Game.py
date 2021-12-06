@@ -1,3 +1,5 @@
+# Created by Amy Law
+
 import pygame
 import random
 
@@ -240,6 +242,7 @@ displayWidth = 800
 displayHeight = 600
 gameDisplay = pygame.display.set_mode((displayWidth, displayHeight))
 
+# Created by Amy Law
 
 # Function For Text Rendering 
 def messageDisplayed(message, textfont, size, color):
@@ -279,6 +282,8 @@ warning = False
 warningCounter = 0
 warningMessage = messageDisplayed("LAUNCH INCOMING", font, 60, red)
 
+# Created by Amy Law
+
 # Asteroid Variables
 asteroid_x = 800
 asteroid_y = random.randint(0, 400)
@@ -293,6 +298,8 @@ crash = pygame.mixer.Sound('sounds/crash.wav')
 optionSelected = pygame.mixer.Sound('sounds/select.wav')
 rivalShooterWarning = pygame.mixer.Sound('sounds/warning.wav')
 rivalShooterMoving = pygame.mixer.Sound('sounds/rival_shooter_moving.wav')
+
+# Created by Amy Law
 
 # Main Menu
 def main_menu():
@@ -592,6 +599,8 @@ def main_game():
 
         # Spawning Opponents
         
+        # Created by Amy Law
+        
         # Spawn Rival Spaceship at Random
         rivalSpawnNumber = random.randint(0, 100)
         if not rivalSpaceshipAlive and score > 500 and rivalSpawnNumber == 25:
@@ -602,6 +611,8 @@ def main_game():
         rivalShooterSpawnNumber = random.randint(0, 200)
         if not rivalShooterAlive and score > 1000 and rivalShooterSpawnNumber == 25:
             warning = True
+            
+        # Created by Amy Law
 
         # Display Warning before Rival Shooter is Spawned
         if warning:
@@ -629,6 +640,8 @@ def main_game():
 
 
         # Detecting Collisions
+        
+        # Created by Amy Law
 
         # Producing Position for Asteroids and Setting Them to be Deleted if Hit by Player's Bullet
         for shootAsteroid in bullets:
@@ -696,6 +709,8 @@ def main_game():
         pygame.display.update()
         clock.tick(FPS)
         
+# Created by Amy Law
+
 # Pause Menu
 def pause():
 
@@ -742,3 +757,4 @@ main_game()
 pygame.quit()
 quit()
 
+# Created by Amy Law
